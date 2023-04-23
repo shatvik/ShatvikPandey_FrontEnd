@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import List from "./component/List"; // importing our List component
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  // dummy data for testing our List component
+  const datas = [
+    {text:'This is sample text1'},
+    {text:'This is sample text2'},
+    {text:'This is sample text3'},
+    {text:'This is sample text4'},
+  ];
+  return (// using our list component with prop:=> items={datas}
+    <div>
+      <List items={datas}/> 
     </div>
   );
 }
